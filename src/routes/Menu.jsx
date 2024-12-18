@@ -27,12 +27,12 @@ const Menu = () => {
       <div>
         <h1 className="text-[26px]">Our Menu</h1>
       </div>
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex justify-center items-center gap-3">
         {["All", "Burger", "Pizza", "Pasta", "Fries"].map((tab) => (
           <button
             key={tab}
             onClick={() => handleTabClick(tab)}
-            className={`px-6 py-2 focus:outline-none rounded-full border-[#976821] ${
+            className={`md:px-6 px-4 py-2 focus:outline-none focus:border-none rounded-full border-[#976821] ${
               activeTab === tab
                 ? "bg-[#976821] text-white"
                 : "hover:bg-[#976821] hover:text-white text-[#976821]"

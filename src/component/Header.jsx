@@ -30,7 +30,7 @@ const Header = () => {
       
     return (
     <div className="relative bg-bg1 bg-no-repeat bg-cover h-[100%] ">
-        <div className="absolute inset-0 bg-black opacity-90 z-0 "></div>
+        <div className="absolute inset-0 bg-black opacity-80 z-0 "></div>
         <div className="flex justify-between items-center container mx-auto p-5 text-[white] z-10 relative  ">
             <div className="text-[20px]">
                 <span>Feane</span>
