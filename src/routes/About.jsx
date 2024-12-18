@@ -1,31 +1,12 @@
 import { MdOutlineRestaurant } from "react-icons/md";
-import  { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
 
 const About = () => {
-    const [years, setYears] = useState(0);
-  const [chefs, setChefs] = useState(0);
-
-  useEffect(() => {
-    const yearsTimer = setInterval(() => {
-      setYears((prev) => {
-        if (prev < 15) return prev + 1;
-        clearInterval(yearsTimer);
-        return prev;
+    const { ref, inView } = useInView({
+        threshold: 0.2, 
+        triggerOnce: true, 
       });
-    }, 100);
-    const chefsTimer = setInterval(() => {
-      setChefs((prev) => {
-        if (prev < 50) return prev + 1;
-        clearInterval(chefsTimer);
-        return prev;
-      });
-    }, 50);
-
-    return () => {
-      clearInterval(yearsTimer);
-      clearInterval(chefsTimer);
-    };
-  }, []);
 
   return (
     <div className="container mx-auto px-5 py-10 flex flex-col-reverse md:flex-row justify-center items-center  gap-10 font-semibold">
@@ -43,9 +24,10 @@ const About = () => {
             <p className="my-6 text-[#777]">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit
             , sed stet lorem sit clita duo justo magna dolore erat amet            </p>
             <div className="grid grid-cols-2   sm:gap-12 gap-4  items-center">
-                <div className="flex justify-center items-center gap-3 sm:gap-6">
+                <div className="flex justify-center items-center gap-3 sm:gap-6 " ref={ref} >
                     <hr className="h-16 w-2 bg-[#FEA116]"/>
-                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold">{years}</span>
+                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={15} duration={2} />}
+                    </span>
                     <div >
                         <p className="font-semibold text-[#777]">Years of </p>
                         <p className="sm:text-[14px] text-[12px]">EXPERIENCE </p>
@@ -53,7 +35,8 @@ const About = () => {
                 </div>
                 <div className="flex justify-center items-center gap-3 sm:gap-6">
                     <hr className="h-16 w-2 bg-[#FEA116]"/>
-                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold">{chefs}</span>
+                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={50} duration={2} />}
+                    </span>
                     <div>
                         <p className="font-semibold text-[#777]"> Popular </p>
                         <p className="sm:text-[14px] text-[12px]">MASTER CHEFS </p>
