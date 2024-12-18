@@ -74,7 +74,6 @@ const Header = () => {
                     <a className='hover:text-[#ffbe33] cursor-pointer '><IoSearchSharp className='w-5 h-5'/> </a>
                 </div>
                 <div>
-                    <button  className=' hover:bg-[#ffbe33] px-6 py-2 text-[16px] rounded-full border-none bg-[#ffbc2c] text-[white]'>Order Online</button>
                 </div>
                 </div>
             </div>
