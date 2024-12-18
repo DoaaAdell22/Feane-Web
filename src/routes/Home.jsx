@@ -1,5 +1,6 @@
 import About from "./About"
 import Menu from "./Menu"
+import We from "./We"
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
         <Menu />
         <About />
+        <We />
     </div>
   )
 }

@@ -11,8 +11,13 @@ export default {
       },
       animation: {
         'slow-spin': 'spin 20s linear infinite',
-      },
-     
+        'ani-image': 'bounce 1.5s infinite linear'      },
+        // keyframes: {
+        //   bounce: {
+        //     '0%, 100%': { transform: 'translateY(0)' },
+        //     '50%': { transform: 'translateY(-25px)' },
+        //   }
+        //   }
     },
   },
   plugins: [],

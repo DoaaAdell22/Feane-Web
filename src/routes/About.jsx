@@ -26,7 +26,7 @@ const About = () => {
             <div className="grid grid-cols-2   sm:gap-12 gap-4  items-center">
                 <div className="flex justify-center items-center gap-3 sm:gap-6 " ref={ref} >
                     <hr className="h-16 w-2 bg-[#FEA116]"/>
-                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={15} duration={2} />}
+                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={15} duration={6} />}
                     </span>
                     <div >
                         <p className="font-semibold text-[#777]">Years of </p>
@@ -35,7 +35,7 @@ const About = () => {
                 </div>
                 <div className="flex justify-center items-center gap-3 sm:gap-6">
                     <hr className="h-16 w-2 bg-[#FEA116]"/>
-                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={50} duration={2} />}
+                    <span className="text-[#FEA116] sm:text-[55px] text-[38px] font-bold"> {inView && <CountUp start={0} end={50} duration={6} />}
                     </span>
                     <div>
                         <p className="font-semibold text-[#777]"> Popular </p>
